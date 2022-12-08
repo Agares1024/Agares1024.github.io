@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>发布测试</title>
-    <url>/2022/12/04/%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="标题测试"><a href="#标题测试" class="headerlink" title="标题测试"></a>标题测试</h2><p>内容测试</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670151364863-2022-12-418:56:05.png"></p>
-<p><img src="/.com//1111.jpg" alt="header"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2022/12/02/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -28,6 +16,129 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo搭建博客从开始到放弃</title>
+    <url>/2022/12/08/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%8E%E5%BC%80%E5%A7%8B%E5%88%B0%E6%94%BE%E5%BC%83/</url>
+    <content><![CDATA[<p>记录博客搭建的过程，根据各路教程总结+补充</p>
+<p>参考链接在文章底部</p>
+<span id="more"></span>
+
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h4 id="官网地址："><a href="#官网地址：" class="headerlink" title="官网地址："></a><strong>官网地址：</strong></h4><p><a href="https://nodejs.org/en/download/">Download | Node.js (nodejs.org)</a></p>
+<h4 id="往期版本："><a href="#往期版本：" class="headerlink" title="往期版本："></a><strong>往期版本：</strong></h4><p><a href="https://nodejs.org/en/download/releases/">Previous Releases | Node.js (nodejs.org)</a></p>
+<h4 id="我装的版本："><a href="#我装的版本：" class="headerlink" title="我装的版本："></a><strong>我装的版本：</strong></h4><p><a href="https://nodejs.org/download/release/v12.19.0/">Index of /download/release/v12.19.0/ (nodejs.org)</a></p>
+<p>根据操作系统选择，32位选择x86，64位选择x64，下载后缀为msi的就行</p>
+<p>（操作系统查看：打开cmd命令（win+r），输入systeminfo，找到系统类型）</p>
+<p>安装过程全点下一步，除了安装路径，如果要装在其他盘，需要自己修改环境配置</p>
+<h4 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h4><p>ctri+r打开cmd窗口，输入node -v，如果有显示版本信息就是安装成功了</p>
+<h4 id="修改npm源"><a href="#修改npm源" class="headerlink" title="修改npm源"></a>修改npm源</h4><p>打开cmd窗口，运行以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p><strong>下载链接：</strong><a href="https://wwqh.lanzouw.com/i1X3Q0hr28te">https://wwqh.lanzouw.com/i1X3Q0hr28te</a></p>
+<p>过程无脑next</p>
+<p>装好后右键点击更多就可以看到多了两个git</p>
+<h4 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱"></a><strong>配置用户名和邮箱</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="检查"><a href="#检查" class="headerlink" title="检查"></a><strong>检查</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>看到里面有你的名字邮箱就是ok了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670144211190-2022-12-416:56:51.png"></p>
+<h2 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h2><p>打开git bush，输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后输入hexo -v，有显示版本信息就是安装成功</p>
+<h2 id="配置Github-Pages"><a href="#配置Github-Pages" class="headerlink" title="配置Github Pages"></a>配置Github Pages</h2><h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>进入官网：github.com</p>
+<p>点击右上角sign up进行注册</p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>注册完成后点击右上角头像左边的加号，选择第一个New repository</p>
+<p>进入创建仓库界面，下图标红的两个必须遵循，其余随意</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670143245093-2022-12-416:43:59.png"></p>
+<h2 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h2><h4 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h4><p>git bash中输入以下代码生成公钥，用来本地连接GitHub</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>看图操作，找到你用户名下的.ssh文件夹</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670144667973-2022-12-417:09:12.png"></p>
+<p>打开后全选复制</p>
+<h4 id="将公钥配置到github"><a href="#将公钥配置到github" class="headerlink" title="将公钥配置到github"></a>将公钥配置到github</h4><p>在github主页，点击头像，选择下拉框中的设置（settings）</p>
+<p>找到一个钥匙图标的，点击new SSH key，然后根据下图提示操作</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146520637-2022-12-417:35:21.png"></p>
+<h4 id="在git-bash测试是否成功"><a href="#在git-bash测试是否成功" class="headerlink" title="在git bash测试是否成功"></a>在git bash测试是否成功</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>和你say hi就是连接成功了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146717582-2022-12-417:38:38.png"></p>
+<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><h4 id="跳转到你的hexo安装路径"><a href="#跳转到你的hexo安装路径" class="headerlink" title="跳转到你的hexo安装路径"></a>跳转到你的hexo安装路径</h4><p>打开cmd命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//跳转方法(cd 你的hexo路径)</span><br><span class="line">cd C:\hexoBlog</span><br><span class="line">//或者直接在文件夹路径一栏输入cmd跳转</span><br></pre></td></tr></table></figure>
+
+<h4 id="执行初始化"><a href="#执行初始化" class="headerlink" title="执行初始化"></a>执行初始化</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog-demo(你的项目名称)</span><br></pre></td></tr></table></figure>
+
+<p>执行成功会提示 INFO Start blogging with Hexo! </p>
+<h4 id="跳转到你新建的项目文件夹里，安装依赖"><a href="#跳转到你新建的项目文件夹里，安装依赖" class="headerlink" title="跳转到你新建的项目文件夹里，安装依赖"></a>跳转到你新建的项目文件夹里，安装依赖</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd 你的项目名称</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成的样子👇</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670147386404-2022-12-417:52:59.png"></p>
+<h4 id="激动人心的项目启动时刻"><a href="#激动人心的项目启动时刻" class="headerlink" title="激动人心的项目启动时刻"></a>激动人心的项目启动时刻</h4><p>git bash 输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br><span class="line">//s就是server(服务器)，也可以写hexo server</span><br></pre></td></tr></table></figure>
+
+<p>启动后最后一行会有一个网址： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>浏览器打开这个网址，正常显示就是搭建成功了</p>
+<h2 id="将项目挂载到github上"><a href="#将项目挂载到github上" class="headerlink" title="将项目挂载到github上"></a>将项目挂载到github上</h2><h4 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改站点配置文件（-config-yml）"><a href="#修改站点配置文件（-config-yml）" class="headerlink" title="修改站点配置文件（_config.yml）"></a>修改站点配置文件（_config.yml）</h4><p>用记事本打开后，ctrl+F搜索deploy</p>
+<p>按照下图修改，repository修改为你的项目地址（用户名+仓库名）</p>
+<p>注意冒号后面要跟一个空格</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670150312113-2022-12-418:38:32.png"></p>
+<h4 id="部署代码"><a href="#部署代码" class="headerlink" title="部署代码"></a>部署代码</h4><p>执行以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">//清空缓存和已生成文件 &amp;&amp; 生成文章 &amp;&amp; 部署文章</span><br><span class="line">//可以三个单独执行，也可以使用&amp;&amp;并符号一起执行</span><br></pre></td></tr></table></figure>
+
+<p>出现 <code>Deploy done</code>，则说明部署成功了</p>
+<p>会有延迟，可以等一会再登入</p>
+<h2 id="发布你的第一篇文章"><a href="#发布你的第一篇文章" class="headerlink" title="发布你的第一篇文章"></a>发布你的第一篇文章</h2><p>在hexo根目录下，打开git bash，输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new &quot;文章名称&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="文章的存放地址"><a href="#文章的存放地址" class="headerlink" title="文章的存放地址"></a>文章的存放地址</h4><p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670151364863-2022-12-418:56:05.png"></p>
+<p>打开你新建的文件，就可以自由编辑啦</p>
+<p>语法使用的是<strong>Markdown 格式</strong></p>
+<h2 id="next主题安装与设定"><a href="#next主题安装与设定" class="headerlink" title="next主题安装与设定"></a>next主题安装与设定</h2><p>官方文档很详细，自己看</p>
+<p><a href="http://theme-next.iissnan.com/getting-started.html#theme-settings">http://theme-next.iissnan.com/getting-started.html#theme-settings</a></p>
+<p>如果不喜欢next主题，<a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<h2 id="其他功能完善"><a href="#其他功能完善" class="headerlink" title="其他功能完善"></a>其他功能完善</h2><h4 id="阅读全文"><a href="#阅读全文" class="headerlink" title="阅读全文"></a><strong>阅读全文</strong></h4><p>在文章中间添加下面的代码，在more后面的内容在首页就会被隐藏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="在文章内添加图片（图床）"><a href="#在文章内添加图片（图床）" class="headerlink" title="在文章内添加图片（图床）"></a>在文章内添加图片（图床）</h4><p>图床设置参考这篇文章：<a href="https://www.cnblogs.com/zhuangjie/p/16365556.html">https://www.cnblogs.com/zhuangjie/p/16365556.html</a></p>
+<p>也可以安装插件来调取图片</p>
+<h4 id="设置背景图片和透明度"><a href="#设置背景图片和透明度" class="headerlink" title="设置背景图片和透明度"></a>设置背景图片和透明度</h4><p>打开hexo根目录/source/新建一个_data文件夹</p>
+<p>在_data文件夹下新建styles.styl文件</p>
+<p>填入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">	//设置背景图片</span><br><span class="line"> 	background:url(/images/mi.jpg); </span><br><span class="line"> 	//背景不平铺</span><br><span class="line"> 	background-repeat: no-repeat;</span><br><span class="line"> 	//背景固定</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    //背景位置</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">    //背景全屏覆盖</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;</span><br><span class="line">//文章内容</span><br><span class="line">.content-wrap &#123;</span><br><span class="line">  //设置透明度，1为不透明</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line">//侧边栏</span><br><span class="line">.sidebar &#123;</span><br><span class="line">  opacity: 0.95;</span><br><span class="line">&#125;</span><br><span class="line">//菜单栏</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  background: rgba(255,255,255,0.9);</span><br><span class="line">&#125;</span><br><span class="line">//搜索框</span><br><span class="line">.popup &#123;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line">.post-block &#123;</span><br><span class="line">  background: rgba(255,255,255,0.9) none repeat scroll !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件，比如我的是 C:\hexoBlog\blogDemo\themes\next下的_config.yml</p>
+<p>将其中的 #style: source/_data/styles.styl 取消注释（删掉#号）</p>
+<h4 id="添加音乐播放器"><a href="#添加音乐播放器" class="headerlink" title="添加音乐播放器"></a>添加音乐播放器</h4><p><a href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
+<p>把<code>dist</code>文件夹复制到主题配置文件<code>themes\next\source</code>文件夹下</p>
+<p>待续</p>
+<h4 id="使用gitalk添加评论区"><a href="#使用gitalk添加评论区" class="headerlink" title="使用gitalk添加评论区"></a>使用gitalk添加评论区</h4><p>待续</p>
+<h2 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h2><h5 id="无法访问-http-localhost-4000"><a href="#无法访问-http-localhost-4000" class="headerlink" title="无法访问 http://localhost:4000/"></a>无法访问 <a href="http://localhost:4000/">http://localhost:4000/</a></h5><p>修改端口就行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="FATAL-bad-indentation-of-a-mapping-entry"><a href="#FATAL-bad-indentation-of-a-mapping-entry" class="headerlink" title="FATAL bad indentation of a mapping entry"></a>FATAL bad indentation of a mapping entry</h5><p>缩进报错，检查修改的地方是否对齐，少没少空格</p>
+<h2 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h2><p><a href="https://www.bilibili.com/video/BV1G84y1B7NH/?spm_id_from=333.999.0.0&vd_source=0f967977f38e4225eab5a71ac478aff2">第1期：从零开始搭建一个能用的博客_哔哩哔哩_bilibili</a></p>
+<p><a href="https://blog.51cto.com/u_15047490/4264608">https://blog.51cto.com/u_15047490/4264608</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>发布测试</title>
+    <url>/2022/12/04/%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="标题测试"><a href="#标题测试" class="headerlink" title="标题测试"></a>标题测试</h2><p>内容测试</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670151364863-2022-12-418:56:05.png"></p>
+<p><img src="/.com//1111.jpg" alt="header"></p>
 ]]></content>
   </entry>
 </search>

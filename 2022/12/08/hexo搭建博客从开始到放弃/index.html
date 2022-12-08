@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="记录博客搭建的过程，根据各路教程总结+补充 参考链接在文章底部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建博客从开始到放弃">
+<meta property="og:url" content="http://example.com/2022/12/08/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%8E%E5%BC%80%E5%A7%8B%E5%88%B0%E6%94%BE%E5%BC%83/index.html">
+<meta property="og:site_name" content="Agares&#39;s Blog">
+<meta property="og:description" content="记录博客搭建的过程，根据各路教程总结+补充 参考链接在文章底部">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670144211190-2022-12-416:56:51.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670143245093-2022-12-416:43:59.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670144667973-2022-12-417:09:12.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146520637-2022-12-417:35:21.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146717582-2022-12-417:38:38.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670147386404-2022-12-417:52:59.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670150312113-2022-12-418:38:32.png">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670151364863-2022-12-418:56:05.png">
+<meta property="article:published_time" content="2022-12-08T02:08:17.000Z">
+<meta property="article:modified_time" content="2022-12-08T03:04:05.073Z">
+<meta property="article:author" content="Agares">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670144211190-2022-12-416:56:51.png">
+
+
+<link rel="canonical" href="http://example.com/2022/12/08/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%8E%E5%BC%80%E5%A7%8B%E5%88%B0%E6%94%BE%E5%BC%83/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/12/08/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%8E%E5%BC%80%E5%A7%8B%E5%88%B0%E6%94%BE%E5%BC%83/","path":"2022/12/08/hexo搭建博客从开始到放弃/","title":"hexo搭建博客从开始到放弃"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>hexo搭建博客从开始到放弃 | Agares's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Agares's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.</span> <span class="nav-text">安装Node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%98%E7%BD%91%E5%9C%B0%E5%9D%80%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">官网地址：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%80%E6%9C%9F%E7%89%88%E6%9C%AC%EF%BC%9A"><span class="nav-number">1.0.2.</span> <span class="nav-text">往期版本：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%91%E8%A3%85%E7%9A%84%E7%89%88%E6%9C%AC%EF%BC%9A"><span class="nav-number">1.0.3.</span> <span class="nav-text">我装的版本：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">1.0.4.</span> <span class="nav-text">检查是否安装成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9npm%E6%BA%90"><span class="nav-number">1.0.5.</span> <span class="nav-text">修改npm源</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85git"><span class="nav-number">2.</span> <span class="nav-text">安装git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1"><span class="nav-number">2.0.1.</span> <span class="nav-text">配置用户名和邮箱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5"><span class="nav-number">2.0.2.</span> <span class="nav-text">检查</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo%E6%A1%86%E6%9E%B6"><span class="nav-number">3.</span> <span class="nav-text">安装hexo框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEGithub-Pages"><span class="nav-number">4.</span> <span class="nav-text">配置Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E6%88%B7"><span class="nav-number">4.0.1.</span> <span class="nav-text">注册github账户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">4.0.2.</span> <span class="nav-text">创建仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5github"><span class="nav-number">5.</span> <span class="nav-text">连接github</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%85%AC%E9%92%A5"><span class="nav-number">5.0.1.</span> <span class="nav-text">生成公钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE%E5%88%B0github"><span class="nav-number">5.0.2.</span> <span class="nav-text">将公钥配置到github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8git-bash%E6%B5%8B%E8%AF%95%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="nav-number">5.0.3.</span> <span class="nav-text">在git bash测试是否成功</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">6.</span> <span class="nav-text">hexo初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E4%BD%A0%E7%9A%84hexo%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84"><span class="nav-number">6.0.1.</span> <span class="nav-text">跳转到你的hexo安装路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">6.0.2.</span> <span class="nav-text">执行初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%B3%E8%BD%AC%E5%88%B0%E4%BD%A0%E6%96%B0%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C%EF%BC%8C%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">6.0.3.</span> <span class="nav-text">跳转到你新建的项目文件夹里，安装依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%BF%80%E5%8A%A8%E4%BA%BA%E5%BF%83%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%AF%E5%8A%A8%E6%97%B6%E5%88%BB"><span class="nav-number">6.0.4.</span> <span class="nav-text">激动人心的项目启动时刻</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E9%A1%B9%E7%9B%AE%E6%8C%82%E8%BD%BD%E5%88%B0github%E4%B8%8A"><span class="nav-number">7.</span> <span class="nav-text">将项目挂载到github上</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-hexo-deployer-git"><span class="nav-number">7.0.1.</span> <span class="nav-text">安装 hexo-deployer-git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%88-config-yml%EF%BC%89"><span class="nav-number">7.0.2.</span> <span class="nav-text">修改站点配置文件（_config.yml）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E4%BB%A3%E7%A0%81"><span class="nav-number">7.0.3.</span> <span class="nav-text">部署代码</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0"><span class="nav-number">8.</span> <span class="nav-text">发布你的第一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%9A%84%E5%AD%98%E6%94%BE%E5%9C%B0%E5%9D%80"><span class="nav-number">8.0.1.</span> <span class="nav-text">文章的存放地址</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next%E4%B8%BB%E9%A2%98%E5%AE%89%E8%A3%85%E4%B8%8E%E8%AE%BE%E5%AE%9A"><span class="nav-number">9.</span> <span class="nav-text">next主题安装与设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD%E5%AE%8C%E5%96%84"><span class="nav-number">10.</span> <span class="nav-text">其他功能完善</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87"><span class="nav-number">10.0.1.</span> <span class="nav-text">阅读全文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E6%96%87%E7%AB%A0%E5%86%85%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%EF%BC%88%E5%9B%BE%E5%BA%8A%EF%BC%89"><span class="nav-number">10.0.2.</span> <span class="nav-text">在文章内添加图片（图床）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%92%8C%E9%80%8F%E6%98%8E%E5%BA%A6"><span class="nav-number">10.0.3.</span> <span class="nav-text">设置背景图片和透明度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8"><span class="nav-number">10.0.4.</span> <span class="nav-text">添加音乐播放器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8gitalk%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8C%BA"><span class="nav-number">10.0.5.</span> <span class="nav-text">使用gitalk添加评论区</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3"><span class="nav-number">11.</span> <span class="nav-text">报错解决</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE-http-localhost-4000"><span class="nav-number">11.0.0.1.</span> <span class="nav-text">无法访问 http:&#x2F;&#x2F;localhost:4000&#x2F;</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#FATAL-bad-indentation-of-a-mapping-entry"><span class="nav-number">11.0.0.2.</span> <span class="nav-text">FATAL bad indentation of a mapping entry</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="nav-number">12.</span> <span class="nav-text">参考链接：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Agares"
+      src="/images/cat.jpg">
+  <p class="site-author-name" itemprop="name">Agares</p>
+  <div class="site-description" itemprop="description">一条咸鱼</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/08/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%8E%E5%BC%80%E5%A7%8B%E5%88%B0%E6%94%BE%E5%BC%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/cat.jpg">
+      <meta itemprop="name" content="Agares">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Agares's Blog">
+      <meta itemprop="description" content="一条咸鱼">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="hexo搭建博客从开始到放弃 | Agares's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hexo搭建博客从开始到放弃
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-12-08 10:08:17 / 修改时间：11:04:05" itemprop="dateCreated datePublished" datetime="2022-12-08T10:08:17+08:00">2022-12-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>记录博客搭建的过程，根据各路教程总结+补充</p>
+<p>参考链接在文章底部</p>
+<span id="more"></span>
+
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><h4 id="官网地址："><a href="#官网地址：" class="headerlink" title="官网地址："></a><strong>官网地址：</strong></h4><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Download | Node.js (nodejs.org)</a></p>
+<h4 id="往期版本："><a href="#往期版本：" class="headerlink" title="往期版本："></a><strong>往期版本：</strong></h4><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/releases/">Previous Releases | Node.js (nodejs.org)</a></p>
+<h4 id="我装的版本："><a href="#我装的版本：" class="headerlink" title="我装的版本："></a><strong>我装的版本：</strong></h4><p><a target="_blank" rel="noopener" href="https://nodejs.org/download/release/v12.19.0/">Index of /download/release/v12.19.0/ (nodejs.org)</a></p>
+<p>根据操作系统选择，32位选择x86，64位选择x64，下载后缀为msi的就行</p>
+<p>（操作系统查看：打开cmd命令（win+r），输入systeminfo，找到系统类型）</p>
+<p>安装过程全点下一步，除了安装路径，如果要装在其他盘，需要自己修改环境配置</p>
+<h4 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h4><p>ctri+r打开cmd窗口，输入node -v，如果有显示版本信息就是安装成功了</p>
+<h4 id="修改npm源"><a href="#修改npm源" class="headerlink" title="修改npm源"></a>修改npm源</h4><p>打开cmd窗口，运行以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p><strong>下载链接：</strong><a target="_blank" rel="noopener" href="https://wwqh.lanzouw.com/i1X3Q0hr28te">https://wwqh.lanzouw.com/i1X3Q0hr28te</a></p>
+<p>过程无脑next</p>
+<p>装好后右键点击更多就可以看到多了两个git</p>
+<h4 id="配置用户名和邮箱"><a href="#配置用户名和邮箱" class="headerlink" title="配置用户名和邮箱"></a><strong>配置用户名和邮箱</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="检查"><a href="#检查" class="headerlink" title="检查"></a><strong>检查</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>看到里面有你的名字邮箱就是ok了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670144211190-2022-12-416:56:51.png"></p>
+<h2 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h2><p>打开git bush，输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后输入hexo -v，有显示版本信息就是安装成功</p>
+<h2 id="配置Github-Pages"><a href="#配置Github-Pages" class="headerlink" title="配置Github Pages"></a>配置Github Pages</h2><h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>进入官网：github.com</p>
+<p>点击右上角sign up进行注册</p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>注册完成后点击右上角头像左边的加号，选择第一个New repository</p>
+<p>进入创建仓库界面，下图标红的两个必须遵循，其余随意</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670143245093-2022-12-416:43:59.png"></p>
+<h2 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h2><h4 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h4><p>git bash中输入以下代码生成公钥，用来本地连接GitHub</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>看图操作，找到你用户名下的.ssh文件夹</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670144667973-2022-12-417:09:12.png"></p>
+<p>打开后全选复制</p>
+<h4 id="将公钥配置到github"><a href="#将公钥配置到github" class="headerlink" title="将公钥配置到github"></a>将公钥配置到github</h4><p>在github主页，点击头像，选择下拉框中的设置（settings）</p>
+<p>找到一个钥匙图标的，点击new SSH key，然后根据下图提示操作</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146520637-2022-12-417:35:21.png"></p>
+<h4 id="在git-bash测试是否成功"><a href="#在git-bash测试是否成功" class="headerlink" title="在git bash测试是否成功"></a>在git bash测试是否成功</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>和你say hi就是连接成功了</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670146717582-2022-12-417:38:38.png"></p>
+<h2 id="hexo初始化"><a href="#hexo初始化" class="headerlink" title="hexo初始化"></a>hexo初始化</h2><h4 id="跳转到你的hexo安装路径"><a href="#跳转到你的hexo安装路径" class="headerlink" title="跳转到你的hexo安装路径"></a>跳转到你的hexo安装路径</h4><p>打开cmd命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//跳转方法(cd 你的hexo路径)</span><br><span class="line">cd C:\hexoBlog</span><br><span class="line">//或者直接在文件夹路径一栏输入cmd跳转</span><br></pre></td></tr></table></figure>
+
+<h4 id="执行初始化"><a href="#执行初始化" class="headerlink" title="执行初始化"></a>执行初始化</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog-demo(你的项目名称)</span><br></pre></td></tr></table></figure>
+
+<p>执行成功会提示 INFO Start blogging with Hexo! </p>
+<h4 id="跳转到你新建的项目文件夹里，安装依赖"><a href="#跳转到你新建的项目文件夹里，安装依赖" class="headerlink" title="跳转到你新建的项目文件夹里，安装依赖"></a>跳转到你新建的项目文件夹里，安装依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd 你的项目名称</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+
+<p>初始化完成的样子👇</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/uTools_1670147386404-2022-12-417:52:59.png"></p>
+<h4 id="激动人心的项目启动时刻"><a href="#激动人心的项目启动时刻" class="headerlink" title="激动人心的项目启动时刻"></a>激动人心的项目启动时刻</h4><p>git bash 输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line">//s就是server(服务器)，也可以写hexo server</span><br></pre></td></tr></table></figure>
+
+<p>启动后最后一行会有一个网址： <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>浏览器打开这个网址，正常显示就是搭建成功了</p>
+<h2 id="将项目挂载到github上"><a href="#将项目挂载到github上" class="headerlink" title="将项目挂载到github上"></a>将项目挂载到github上</h2><h4 id="安装-hexo-deployer-git"><a href="#安装-hexo-deployer-git" class="headerlink" title="安装 hexo-deployer-git"></a>安装 hexo-deployer-git</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改站点配置文件（-config-yml）"><a href="#修改站点配置文件（-config-yml）" class="headerlink" title="修改站点配置文件（_config.yml）"></a>修改站点配置文件（_config.yml）</h4><p>用记事本打开后，ctrl+F搜索deploy</p>
+<p>按照下图修改，repository修改为你的项目地址（用户名+仓库名）</p>
+<p>注意冒号后面要跟一个空格</p>
+<p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670150312113-2022-12-418:38:32.png"></p>
+<h4 id="部署代码"><a href="#部署代码" class="headerlink" title="部署代码"></a>部署代码</h4><p>执行以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">//清空缓存和已生成文件 &amp;&amp; 生成文章 &amp;&amp; 部署文章</span><br><span class="line">//可以三个单独执行，也可以使用&amp;&amp;并符号一起执行</span><br></pre></td></tr></table></figure>
+
+<p>出现 <code>Deploy done</code>，则说明部署成功了</p>
+<p>会有延迟，可以等一会再登入</p>
+<h2 id="发布你的第一篇文章"><a href="#发布你的第一篇文章" class="headerlink" title="发布你的第一篇文章"></a>发布你的第一篇文章</h2><p>在hexo根目录下，打开git bash，输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章名称&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="文章的存放地址"><a href="#文章的存放地址" class="headerlink" title="文章的存放地址"></a>文章的存放地址</h4><p><img src="https://fastly.jsdelivr.net/gh/Agares1024/img@main/img/1670151364863-2022-12-418:56:05.png"></p>
+<p>打开你新建的文件，就可以自由编辑啦</p>
+<p>语法使用的是<strong>Markdown 格式</strong></p>
+<h2 id="next主题安装与设定"><a href="#next主题安装与设定" class="headerlink" title="next主题安装与设定"></a>next主题安装与设定</h2><p>官方文档很详细，自己看</p>
+<p><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html#theme-settings">http://theme-next.iissnan.com/getting-started.html#theme-settings</a></p>
+<p>如果不喜欢next主题，<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<h2 id="其他功能完善"><a href="#其他功能完善" class="headerlink" title="其他功能完善"></a>其他功能完善</h2><h4 id="阅读全文"><a href="#阅读全文" class="headerlink" title="阅读全文"></a><strong>阅读全文</strong></h4><p>在文章中间添加下面的代码，在more后面的内容在首页就会被隐藏</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="在文章内添加图片（图床）"><a href="#在文章内添加图片（图床）" class="headerlink" title="在文章内添加图片（图床）"></a>在文章内添加图片（图床）</h4><p>图床设置参考这篇文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhuangjie/p/16365556.html">https://www.cnblogs.com/zhuangjie/p/16365556.html</a></p>
+<p>也可以安装插件来调取图片</p>
+<h4 id="设置背景图片和透明度"><a href="#设置背景图片和透明度" class="headerlink" title="设置背景图片和透明度"></a>设置背景图片和透明度</h4><p>打开hexo根目录/source/新建一个_data文件夹</p>
+<p>在_data文件夹下新建styles.styl文件</p>
+<p>填入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">	//设置背景图片</span><br><span class="line"> 	background:url(/images/mi.jpg); </span><br><span class="line"> 	//背景不平铺</span><br><span class="line"> 	background-repeat: no-repeat;</span><br><span class="line"> 	//背景固定</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    //背景位置</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">    //背景全屏覆盖</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;</span><br><span class="line">//文章内容</span><br><span class="line">.content-wrap &#123;</span><br><span class="line">  //设置透明度，1为不透明</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line">//侧边栏</span><br><span class="line">.sidebar &#123;</span><br><span class="line">  opacity: 0.95;</span><br><span class="line">&#125;</span><br><span class="line">//菜单栏</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  background: rgba(255,255,255,0.9);</span><br><span class="line">&#125;</span><br><span class="line">//搜索框</span><br><span class="line">.popup &#123;</span><br><span class="line">  opacity: 0.9;</span><br><span class="line">&#125;</span><br><span class="line">.post-block &#123;</span><br><span class="line">  background: rgba(255,255,255,0.9) none repeat scroll !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开主题配置文件，比如我的是 C:\hexoBlog\blogDemo\themes\next下的_config.yml</p>
+<p>将其中的 #style: source/_data/styles.styl 取消注释（删掉#号）</p>
+<h4 id="添加音乐播放器"><a href="#添加音乐播放器" class="headerlink" title="添加音乐播放器"></a>添加音乐播放器</h4><p><a target="_blank" rel="noopener" href="https://github.com/DIYgod/APlayer">https://github.com/DIYgod/APlayer</a></p>
+<p>把<code>dist</code>文件夹复制到主题配置文件<code>themes\next\source</code>文件夹下</p>
+<p>待续</p>
+<h4 id="使用gitalk添加评论区"><a href="#使用gitalk添加评论区" class="headerlink" title="使用gitalk添加评论区"></a>使用gitalk添加评论区</h4><p>待续</p>
+<h2 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h2><h5 id="无法访问-http-localhost-4000"><a href="#无法访问-http-localhost-4000" class="headerlink" title="无法访问 http://localhost:4000/"></a>无法访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></h5><p>修改端口就行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 5000</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="FATAL-bad-indentation-of-a-mapping-entry"><a href="#FATAL-bad-indentation-of-a-mapping-entry" class="headerlink" title="FATAL bad indentation of a mapping entry"></a>FATAL bad indentation of a mapping entry</h5><p>缩进报错，检查修改的地方是否对齐，少没少空格</p>
+<h2 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1G84y1B7NH/?spm_id_from=333.999.0.0&vd_source=0f967977f38e4225eab5a71ac478aff2">第1期：从零开始搭建一个能用的博客_哔哩哔哩_bilibili</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15047490/4264608">https://blog.51cto.com/u_15047490/4264608</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/12/04/%E5%8F%91%E5%B8%83%E6%B5%8B%E8%AF%95/" rel="prev" title="发布测试">
+                  <i class="fa fa-chevron-left"></i> 发布测试
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">闽ICP备2022017248号-1 </a>
+  </div>
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Agares</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Agares1024# GitHub repo owner","repo":"Agares1024.github.io# Repository name to store issues","client_id":"40f2f62ca4858cf3437c# GitHub Application Client ID","client_secret":"ea10a926# GitHub Application Client Secret","admin_user":"2025575070@qq.com# GitHub repo owner and collaborators, only these guys can initialize gitHub issues","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"8d934f7a7804cb40f5aba6ffe9735ca8"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+</body>
+</html>
